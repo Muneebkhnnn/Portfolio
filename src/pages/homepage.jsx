@@ -22,6 +22,7 @@ import SEO from "../data/seo";
 import "./styles/homepage.css";
 import { FaLinkedin } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
+import MyStack from "../components/homepage/MyStack";
 
 const Homepage = () => {
 	const [stayLogo, setStayLogo] = useState(false);
@@ -156,13 +157,15 @@ const Homepage = () => {
 							</a>
 						</div>
 
+						<div>
+							<MyStack />
+						</div>
+
 						<div className="homepage-projects">
 							<AllProjects />
 						</div>
 
 						<div className="homepage-after-title">
-
-
 							<div className="homepage-works">
 								<Works />
 							</div>
