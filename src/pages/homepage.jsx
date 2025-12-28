@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -28,6 +28,43 @@ const Homepage = () => {
 	const [stayLogo, setStayLogo] = useState(false);
 	const [logoSize, setLogoSize] = useState(80);
 	const [oldLogoSize, setOldLogoSize] = useState(80);
+
+	const wrapperRef = useRef(null);
+	const baseTransform = useRef("");
+
+	useEffect(() => {
+		if (wrapperRef.current) {
+			baseTransform.current =
+				getComputedStyle(wrapperRef.current).transform === "none"
+					? "rotate(3deg)"
+					: getComputedStyle(wrapperRef.current).transform;
+		}
+	}, []);
+
+	const handleMouseMove = (e) => {
+		const el = wrapperRef.current;
+		const rect = el.getBoundingClientRect();
+
+		const x = e.clientX - rect.left;
+		const y = e.clientY - rect.top;
+
+		const centerX = rect.width / 2;
+		const centerY = rect.height / 2;
+
+		const rotateX = ((centerY - y) / centerY) * 10;
+		const rotateY = ((x - centerX) / centerX) * 10;
+
+		el.style.transform = `
+      ${baseTransform.current}
+      rotateX(${rotateX}deg)
+      rotateY(${rotateY}deg)
+      scale(1.02)
+    `;
+	};
+
+	const handleMouseLeave = () => {
+		wrapperRef.current.style.transform = baseTransform.current;
+	};
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -90,9 +127,9 @@ const Homepage = () => {
 					</div>
 
 					<div className="homepage-container">
-						<div className="homepage-first-area">
+						<div className=" animate-slide-up homepage-first-area">
 							<div className="homepage-first-area-left-side">
-								<div className="title homepage-title">
+								<div className="  title homepage-title">
 									{INFO.homepage.title}
 								</div>
 
@@ -103,12 +140,13 @@ const Homepage = () => {
 
 							<div className="homepage-first-area-right-side">
 								<div className="homepage-image-container">
-									<div className="homepage-image-wrapper">
-										<img
-											src="homepage.jpg"
-											alt="about"
-											className="homepage-image"
-										/>
+									<div
+										ref={wrapperRef}
+										className="homepage-image-wrapper"
+										onMouseMove={handleMouseMove}
+										onMouseLeave={handleMouseLeave}
+									>
+										<img src="homepage.jpg" alt="about" />
 									</div>
 								</div>
 							</div>

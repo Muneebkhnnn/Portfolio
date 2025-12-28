@@ -37,6 +37,7 @@
 }
 
 .homepage-image-container {
+	perspective: 1000px;
 	width: 370px;
 	height: 370px;
 }
@@ -45,6 +46,9 @@
 	overflow: hidden;
 	border-radius: 10%;
 	transform: rotate(3deg);
+	transition: transform 0.18s ease-out;
+	will-change: transform;
+	/* box-shadow: 0 20px 40px rgba(0,0,0,0.25); */
 }
 
 .homepage-image-wrapper img {
@@ -100,7 +104,8 @@
 
 	.homepage-first-area-left-side {
 		display: flex;
-		flex-direction: column; /* Changed: set direction to column */
+		flex-direction: column;
+		/* Changed: set direction to column */
 		align-items: flex-start;
 		width: 100%;
 		order: 2;
@@ -147,4 +152,4 @@
 		margin-left: -25px;
 		margin-right: -25px;
 	}
-}
+} 
