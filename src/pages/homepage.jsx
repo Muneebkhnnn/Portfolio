@@ -1,13 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
-import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SiLeetcode } from "react-icons/si";
 import {
-	faTwitter,
 	faGithub,
-	faStackOverflow,
-	faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
 import Logo from "../components/common/logo";
@@ -146,7 +142,7 @@ const Homepage = () => {
 										onMouseMove={handleMouseMove}
 										onMouseLeave={handleMouseLeave}
 									>
-										<img src="homepage.jpg" alt="about" />
+										<img src="homepage.webp" alt="about" />
 									</div>
 								</div>
 							</div>

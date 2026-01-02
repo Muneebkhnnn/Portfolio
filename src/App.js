@@ -1,29 +1,57 @@
-import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import ReactGA from "react-ga4";
-
+import { lazy, Suspense } from "react";
 import Homepage from "./pages/homepage";
-import About from "./pages/about";
-import Projects from "./pages/projects";
-import Contact from "./pages/contact";
-import Notfound from "./pages/404";
-
-import "./app.css";
+import './app.css'
+const About = lazy(() => import("./pages/about"));
+const Contact = lazy(() => import("./pages/contact"));
+const Projects = lazy(() => import("./pages/projects"));
+const Notfound = lazy(() => import("./pages/404"));
 
 function App() {
-	
+  return (
+      <Routes>
+        {/* Home → no Suspense (LCP safe) */}
+        <Route path="/" element={<Homepage />} />
 
-	return (
-		<div className="App">
-			<Routes>
-				<Route path="/" element={<Homepage />} />
-				<Route path="/about" element={<About />} />
-				<Route path="/projects" element={<Projects />} />
-				<Route path="/contact" element={<Contact />} />
-				<Route path="*" element={<Notfound />} />
-			</Routes>
-		</div>
-	);
+        {/* Lazy routes */}
+        <Route
+          path="/about"
+          element={
+            <Suspense fallback={null}>
+              <About />
+            </Suspense>
+          }
+        />
+
+        <Route
+          path="/projects"
+          element={
+            <Suspense fallback={null}>
+              <Projects />
+            </Suspense>
+          }
+        />
+
+        <Route
+          path="/contact"
+          element={
+            <Suspense fallback={null}>
+              <Contact />
+            </Suspense>
+          }
+        />
+
+        <Route
+          path="*"
+          element={
+            <Suspense fallback={null}>
+              <Notfound />
+            </Suspense>
+          }
+        />
+      </Routes>
+
+  );
 }
 
 export default App;
