@@ -5,7 +5,7 @@ import { SiLeetcode } from "react-icons/si";
 import {
 	faGithub,
 } from "@fortawesome/free-brands-svg-icons";
-
+import { FaWhatsapp } from "react-icons/fa";
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
@@ -149,6 +149,9 @@ const Homepage = () => {
 						</div>
 
 						<div className="homepage-socials">
+							<a href="https://wa.me/919858325704?text=Hello%20I%20want%20to%20connect">
+								<FaWhatsapp className="homepage-social-icon"/>
+							</a>
 							<a
 								href={INFO.socials.github}
 								target="_blank"

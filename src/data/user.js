@@ -8,6 +8,7 @@ const INFO = {
 	},
 
 	socials: {
+		resume:"https://drive.google.com/file/d/1HE5Thm9cFa8Ydu_ALBuHT3iUDQNNV-J6/view?usp=sharing",
 		github: "https://github.com/Muneebkhnnn",
 		linkedin: "https://www.linkedin.com/in/muneeb-khan-1281b31bb/",
 		leetcode: " https://leetcode.com/u/Muneeb_khan__/",
@@ -33,6 +34,21 @@ const INFO = {
 	},
 
 	projects: [
+		{
+			title: "Interv-AI",
+			description:
+				"Real-time interview platform with AI feedback, slot booking, and a credit-based subscription economy. Gemini 2.5 Flash processes transcripts post-call and returns structured feedback across 7 dimensions in seconds.",
+			logo: "/logo.png",
+			linkText: "View Project",
+			link: "https://interv-ai-navy.vercel.app/",
+		},{
+			title: "V0",
+			description:
+				"Built an AI-powered app builder that converts natural language prompts into live, runnable Next.js apps using isolated E2B sandboxes. Designed an event-driven agent pipeline (Inngest + Gemini 2.5 Flash) for autonomous code generation, and implemented a credit-based system with an IDE-style UI featuring live preview and file explorer—cutting prototype time by ~80%",
+			logo: "/logo.svg",
+			linkText: "View Project",
+			link: "https://v0-tau-roan-25.vercel.app/",
+		},
 		{
 			title: "Nexon",
 			description:

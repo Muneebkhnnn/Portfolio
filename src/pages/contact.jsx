@@ -17,6 +17,19 @@ const Contact = () => {
 		window.scrollTo(0, 0);
 	}, []);
 
+	let message='Hii, I want a 50k full stack website'
+	const encodedMessage = encodeURIComponent(message);
+	
+	const handleMessage = () => {
+		console.log('i was clicked')
+    const phoneNumber = "919858325704"; 
+
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    window.open(whatsappURL, "_blank");
+
+  }
+
 	const currentSEO = SEO.find((item) => item.page === "contact");
 
 	return (
@@ -46,7 +59,8 @@ const Contact = () => {
 
 						<div className="subtitle contact-subtitle">
 							Got a project, an idea, or a bug that refuses to die?
-							Reach out to me at
+							Reach out to me at my &nbsp;{""}
+							<span onClick={handleMessage} className="Phone">Phone Number</span> Or at my emial
 							&nbsp;{" "}
 							<a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${INFO.main.email}.com`}>
 								{INFO.main.email}

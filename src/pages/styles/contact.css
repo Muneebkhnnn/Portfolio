@@ -4,6 +4,17 @@
 	padding-top: 25px;
 }
 
+.Phone{
+	/* background-color: rgb(235, 199, 154) */
+	color:rgb(62, 62, 142);
+	cursor: pointer;
+	font-weight:bold;
+}
+
+/* .phone:hover{
+	cursor: pointer;
+} */
+
 .contact-logo {
 	display: flex;
 	position: fixed;

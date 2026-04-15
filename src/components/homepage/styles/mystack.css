@@ -6,15 +6,18 @@
 
 .mystack .stack-title {
     /* background: linear-gradient(to top right, #36c4e4, #9ee8c8); */
-    font-weight: 500;
-    border: 2px solid var(--secondary-color);
-    border-radius: 12px;
-    padding: 12px 24px;
-    display: inline-block;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: bold;
+    display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 18px;
+	background-color: rgb(5, 4, 4);
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: larger;
+	border-radius: 10px;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.12);
+    margin-top: 12px;
 }
 
 /* CARD */

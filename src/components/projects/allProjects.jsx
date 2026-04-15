@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Project from "./project";
 
 import INFO from "../../data/user";
 
 import "./styles/allProjects.css";
+
 
 const AllProjects = () => {
 	return (

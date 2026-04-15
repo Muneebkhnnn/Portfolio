@@ -34,13 +34,17 @@ const Projects = () => {
 				<div className="content-wrapper">
 					<div className="projects-logo-container">
 						<div className="projects-logo">
-							<Logo width={46} />
+							<Logo width={44} />
 						</div>
 					</div>
 					<div className="projects-container">
 						<div className="title projects-title">
-							Things I’ve made trying to put my dent in the
-							universe.
+							Projects I Built End-to-End
+						</div>
+						<div className="projects-subtitle">
+							A curated selection of production-focused builds across AI,
+							real-time systems, and full-stack web apps. Each card links
+							to a live demo or walkthrough.
 						</div>
 
 						<div className="projects-list">

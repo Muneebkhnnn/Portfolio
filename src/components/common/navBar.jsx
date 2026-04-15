@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import INFO from "../../data/user";
+
 import "./styles/navBar.css";
 
 const NavBar = (props) => {
@@ -39,7 +41,7 @@ const NavBar = (props) => {
 							>
 								<Link to="/projects">Projects</Link>
 							</li>
-							
+
 							<li
 								className={
 									active === "contact"
@@ -52,6 +54,16 @@ const NavBar = (props) => {
 						</ul>
 					</div>
 				</nav>
+				<div className="resume-container">
+					<a
+						className="resume"
+						href={INFO.socials.resume}
+						target="_blank"
+						rel="noreferrer"
+					>
+						Resume
+					</a>
+				</div>
 			</div>
 		</React.Fragment>
 	);

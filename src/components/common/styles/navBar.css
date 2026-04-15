@@ -1,6 +1,8 @@
 @import "../../../data/styles.css";
 
+
 .nav-container {
+	position: relative;
 	margin: 0;
 	display: flex;
 	justify-content: center;
@@ -55,6 +57,38 @@
 	transition: color 0.3s ease-in-out;
 }
 
+.resume-container {
+	opacity: 0.8;
+	position: fixed;
+	top: 3vh;
+	right: 12vw;
+	z-index: 1000;
+	
+}
+
+.resume {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 18px;
+	/* background-color: var(--link-color); */
+
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 12px;
+	border-radius: 999px;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.12);
+	transition: transform 0.2s ease, box-shadow 0.2s ease,
+		background-color 0.2s ease;
+}
+
+.resume:hover {
+	background-color: var(--link-color);
+	transform: translateY(-1px);
+	box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.16);
+}
+
 @media (max-width: 600px) {
 	.navbar {
 		margin-left: 25%;
@@ -70,5 +104,27 @@
 
 	.nav-item {
 		font-weight: bold;
+	}
+
+	/* .resume-container {
+		right: 4vw;
+		top: 10px;
+	} */
+
+	.resume {
+		padding: 8px 14px;
+		font-size: 12px;
+	}
+}
+
+@media(max-width: 768px){
+	.resume-container{
+		right: 5vw;
+		top: 10px;
+	}
+
+	.nav-container{
+		position: absolute;
+		left: 36vw;
 	}
 }
