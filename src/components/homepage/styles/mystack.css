@@ -78,7 +78,7 @@
 .mystack .marquee-inner {
     display: flex;
     min-width: 200%;
-    animation: marqueeScroll 16s linear infinite;
+    animation: marqueeScroll 10s linear infinite;
 }
 
 .mystack .marquee-reverse {

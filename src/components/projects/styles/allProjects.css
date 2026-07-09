@@ -13,9 +13,9 @@
 @media (max-width: 600px) {
 	.all-projects-container {
 		grid-template-columns: 1fr;
-		gap: 16px;
-		padding-top: 20px;
-		padding-bottom: 20px;
+		/* gap: 16px; */
+		/* padding-top: 4rem; */
+		
 	}
 
 	.all-projects-project {

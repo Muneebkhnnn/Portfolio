@@ -8,7 +8,7 @@ const INFO = {
 	},
 
 	socials: {
-		resume:"https://drive.google.com/file/d/1HE5Thm9cFa8Ydu_ALBuHT3iUDQNNV-J6/view?usp=sharing",
+		resume:"https://drive.google.com/file/d/1hMIHLsUAlkCjcLpG2Fj01YejASnJXNRK/view?usp=sharing",
 		github: "https://github.com/Muneebkhnnn",
 		linkedin: "https://www.linkedin.com/in/muneeb-khan-1281b31bb/",
 		leetcode: " https://leetcode.com/u/Muneeb_khan__/",
